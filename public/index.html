@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Actividades</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        form {
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gestión de Actividades</h1>
+    
+    <!-- Formulario de Actividades -->
+    <form id="formularioActividad">
+        <input 
+            type="text" 
+            id="descripcion" 
+            placeholder="Descripción de la actividad" 
+            required
+        >
+        <select id="estado">
+            <option value="Activo">Activo</option>
+            <option value="Pendiente">Pendiente</option>
+            <option value="Completado">Completado</option>
+        </select>
+        <button type="submit">Crear Actividad</button>
+    </form>
+
+    <!-- Tabla de Actividades -->
+    <h2>Listado de Actividades</h2>
+    <table id="tablaActividades">
+        <thead>
+            <tr>
+                <th>Descripción</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoActividades"></tbody>
+    </table>
+
+    <!-- Tabla de Logs -->
+    <h2>Registro de Actividades</h2>
+    <table id="tablaLogs">
+        <thead>
+            <tr>
+                <th>Acción</th>
+                <th>Entidad</th>
+                <th>Detalles</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoLogs"></tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>
